@@ -1,0 +1,36 @@
+const mongoose = require('mongoose');
+
+//connecting to mongoDB
+mongoose.connect("mongodb://localhost:27017/fruitDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+//schema
+const fruitSchema = new mongoose.Schema({
+  name: String,
+  rating: Number
+});
+
+
+//mongoose model - new collection called fruits
+const Fruit = mongoose.model("Fruit", fruitSchema);
+
+//creating document from Fruit model*
+const fruit = new Fruit({
+  name: "Apple",
+  rating: 8
+})
+
+//saving fruit document to Fruits coollection inside fruitDB*
+//fruit.save();
+
+
+//Update one document
+Fruit.updateOne({_id:"60b47e2fb050a73a58027025"},{name:"Pineapple"},(err)=>{
+  if (err) {
+    console.log(err);
+  }else {
+    console.log("Success");
+  }
+})
