@@ -129,6 +129,8 @@ Given three properties of computing systems, consistency, availability, and part
 
  
 ### SQL to MongoDB Mapping Chart
-https://www.mongodb.com/docs/manual/reference/sql-comparison/
+<img src="https://github.com/ksalokya/mondodb_mongoose_crud/blob/main/table.png" />
+
+#### For more visit - https://www.mongodb.com/docs/manual/reference/sql-comparison/
 
 
